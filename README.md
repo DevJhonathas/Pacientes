@@ -56,6 +56,21 @@ O formulário permite registrar as seguintes informações:
 - Verificação de CPF duplicado.
 - Impedimento de datas de nascimento futuras.
 
+ ### 🔢 Validação matemática do CPF
+
+A validação do CPF utiliza o algoritmo de **módulo 11**, responsável por verificar os dois dígitos verificadores do documento.
+
+O cálculo é realizado em duas etapas:
+
+1. **Primeiro dígito:** os nove primeiros números são multiplicados por pesos de 10 a 2. A soma dos resultados é dividida por 11 para determinar o primeiro dígito verificador.
+2. **Segundo dígito:** os nove números iniciais, juntamente com o primeiro dígito calculado, são multiplicados por pesos de 11 a 2. O mesmo procedimento é aplicado para obter o segundo dígito.
+
+Em ambos os cálculos, quando o resto da divisão por 11 é menor que 2, o dígito resultante é 0. Caso contrário, utiliza-se a diferença entre 11 e o resto.
+
+**O sistema também rejeita sequências repetidas**, como `000.000.000-00` e `111.111.111-11`.
+
+> **Importante:** essa validação verifica apenas a consistência matemática do CPF. Ela não confirma sua existência, situação cadastral ou identidade do titular junto à Receita Federal.
+
 ### 📊 Gerenciamento de registros
 
 A aplicação utiliza o AG Grid para apresentar os pacientes em uma tabela interativa.
