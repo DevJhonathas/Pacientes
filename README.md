@@ -1,57 +1,278 @@
-# Projeto Lista Pacientes: CRUD com Vue.js, Vuetify, TinyMCE e AG-grid
+# 🏥 Pacientes — Sistema de Gerenciamento de Cadastros
 
-## Descrição
+Aplicação web desenvolvida com Vue.js para realizar o gerenciamento de cadastros de pacientes, oferecendo uma interface intuitiva, responsiva e organizada para operações de CRUD (Create, Read, Update e Delete).
 
-Este projeto consiste em um CRUD (Create, Read, Update, Delete) desenvolvido utilizando Vue.js em conjunto com Vuetify para estilização, TinyMCE para edição avançada de texto e AG-grid para exibição e manipulação eficiente de dados em uma tabela.
+O projeto busca demonstrar a utilização de tecnologias do ecossistema Vue.js na construção de uma aplicação administrativa, combinando componentes visuais, manipulação de dados e armazenamento local.
 
-### Link da aplicação: [WebSite Pacientes](https://cg-crud-git-master-jhonathas-projects.vercel.app) 
+<p align="center">
+  <a href="https://cg-crud-git-master-jhonathas-projects.vercel.app">
+    <strong>🌐 Acessar aplicação</strong>
+  </a>
+</p>
 
+---
 
-## Funcionalidades
+## 📋 Sobre o projeto
 
-### CRUD
+O **Pacientes** foi desenvolvido com o objetivo de facilitar o gerenciamento de informações cadastrais por meio de uma tabela interativa.
 
-- **Cadastro**: Ao clicar no botão verde "Cadastrar Lista", um modal é exibido para inserção das informações. Após confirmar, os dados são automaticamente adicionados à tabela.
-- **Edição**: Cada linha da tabela pode ser editada basta clicar duas vezes sobre ela e modificar os dados existentes.
-- **Exclusão**: Há um botão de lixeira em cada linha da tabela para excluir individualmente a linha correspondente.
-- **Deleção em Massa**: O botão vermelho "Deletar Lista" exclui todos os registros da tabela de uma vez.
+A aplicação permite cadastrar novos pacientes, consultar informações, editar registros existentes e realizar exclusões individuais ou em massa.
 
-### Responsividade
+Além das funcionalidades de CRUD, o sistema apresenta uma página inicial explicativa, indicadores de cadastros, ferramentas de pesquisa e filtragem, exportação de dados e uma interface adaptável a diferentes dispositivos.
 
-- O projeto é totalmente responsivo, adaptando-se a diferentes tamanhos de tela, proporcionando uma experiência consistente em dispositivos móveis e desktop.
+---
 
-### Página de Erro
+## ✨ Funcionalidades
 
-- Uma página de erro personalizada é exibida quando o usuário tenta acessar uma URL inválida.
-- A página apresenta uma mensagem informativa de que a página não foi encontrada.
-- Inclui um botão "Voltar para Tela Inicial" que redireciona o usuário de volta à página principal do projeto.
-- Abaixo da mensagem, há um gif animado de um coelho com uma xícara de café para adicionar um toque amigável à experiência de usuário.
+### 🏠 Página inicial
 
-## Tecnologias Utilizadas
+- Apresentação do projeto e de sua finalidade.
+- Navegação por seções através de uma navbar.
+- Menu hambúrguer para dispositivos móveis.
+- Seção explicativa sobre os recursos disponíveis.
+- Área de gerenciamento posicionada ao final da página.
+- Rodapé com identificação do projeto e navegação.
 
-- **Vue.js**: Framework JavaScript progressivo para construir interfaces de usuário.
-- **Vuetify**: Framework de componentes baseado em Material Design para Vue.js.
-- **TinyMCE**: Editor de texto JavaScript que facilita a edição avançada de conteúdo.
-- **AG-grid**: Biblioteca avançada de grid para exibição e manipulação de dados tabulares.
-- **Vue-router**: Biblioteca para gerenciamento de rotas.
+### 👤 Cadastro de pacientes
 
-## Instalação e Uso
+O formulário permite registrar as seguintes informações:
 
-Para rodar o projeto localmente, siga estas etapas:
+| Campo | Descrição |
+|---|---|
+| Primeiro nome | Nome do paciente |
+| Sobrenome | Sobrenome do paciente |
+| E-mail | Endereço de e-mail |
+| CPF | Documento com formatação automática |
+| Nascimento | Data de nascimento |
+| Escolaridade | Nível de escolaridade |
+| Sexo | Informação selecionada pelo usuário |
 
-1. Clone este repositório:
+**Validações implementadas:**
+
+- Verificação de campos obrigatórios.
+- Validação básica do formato de e-mail.
+- Validação matemática dos dígitos verificadores do CPF.
+- Formatação automática do CPF.
+- Verificação de CPF duplicado.
+- Impedimento de datas de nascimento futuras.
+
+### 📊 Gerenciamento de registros
+
+A aplicação utiliza o AG Grid para apresentar os pacientes em uma tabela interativa.
+
+Principais recursos:
+
+- **Consulta:** visualização dos pacientes cadastrados.
+- **Pesquisa:** busca rápida por informações dos registros.
+- **Filtros:** filtragem individual das colunas.
+- **Ordenação:** organização dos registros por diferentes campos.
+- **Edição:** alteração dos dados diretamente na tabela, utilizando dois cliques sobre a célula.
+- **Exclusão individual:** remoção de pacientes específicos.
+- **Exclusão em massa:** limpeza de todos os registros cadastrados.
+- **Identificação única:** utilização de identificadores para preservar a referência dos registros durante as edições.
+
+### 📈 Indicadores
+
+A interface apresenta indicadores dinâmicos para facilitar a visualização dos cadastros:
+
+- Total de pacientes.
+- Quantidade de pacientes do sexo masculino.
+- Quantidade de pacientes do sexo feminino.
+- Quantidade de outros registros ou sem classificação nas categorias anteriores.
+
+Os indicadores são atualizados conforme os registros são adicionados ou removidos.
+
+### 📥 Exportação de dados
+
+- Exportação dos registros em formato CSV.
+- Arquivo compatível com ferramentas de planilhas, como Microsoft Excel e LibreOffice Calc.
+- Exportação dos dados disponíveis na tabela.
+
+### 🚫 Página 404 personalizada
+
+A aplicação possui uma página personalizada para endereços inexistentes.
+
+Características:
+
+- Apresentação do código de erro 404.
+- Mensagem explicativa.
+- Botão para retornar à página inicial.
+- GIF animado de um coelhinho com uma xícara de café.
+- Interface alinhada à identidade visual do projeto.
+
+### 📱 Responsividade
+
+A interface foi desenvolvida para oferecer uma experiência adaptável a diferentes tamanhos de tela.
+
+- Navbar responsiva.
+- Menu hambúrguer em dispositivos móveis.
+- Layout adaptável.
+- Organização dos componentes para telas menores.
+- Elementos visuais ajustados para desktop e mobile.
+
+---
+
+## 🛠️ Tecnologias utilizadas
+
+O projeto utiliza tecnologias do ecossistema JavaScript e Vue.js.
+
+| Tecnologia | Versão declarada | Aplicação |
+|---|---|---|
+| [Vue.js](https://vuejs.org/) | 3.4.x | Construção da interface |
+| [Vuetify](https://vuetifyjs.com/) | 3.5.x | Componentes visuais e estilização |
+| [Vite](https://vite.dev/) | 5.x | Ambiente de desenvolvimento e build |
+| [Vue Router](https://router.vuejs.org/) | 4.x | Gerenciamento de rotas |
+| [AG Grid](https://www.ag-grid.com/) | 32.x | Tabela interativa e manipulação de dados |
+| [TinyMCE](https://www.tiny.cloud/) | 5.x (integração Vue) | Dependência disponível para edição de conteúdo |
+| [Material Design Icons](https://pictogrammers.com/library/mdi/) | 7.x | Ícones da interface |
+
+### Outras ferramentas
+
+- **JavaScript:** lógica e manipulação dos dados.
+- **HTML5:** estrutura da aplicação.
+- **CSS3:** personalização visual.
+- **LocalStorage:** armazenamento local dos registros no navegador.
+- **Git e GitHub:** versionamento e hospedagem do código-fonte.
+- **Vercel:** implantação e disponibilização da aplicação.
+
+---
+
+## 🚀 Instalação e execução
+
+Para executar o projeto localmente, é necessário ter o Node.js e o npm instalados.
+
+**Requisito de ambiente:** Node.js 26.x, conforme a configuração atual de implantação na Vercel.
+
+### 1. Clone o repositório
+
+```bash
 git clone https://github.com/DevJhonathas/CG-CRUD.git
+```
 
-2. Instale as dependências usando npm ou yarn:
-**npm install**
-ou
-**yarn install**
+### 2. Entre na pasta do projeto
 
-3. Inicie o servidor de desenvolvimento:
-**npm run dev**
-ou
-**yarn dev**
-4. Abra o navegador e acesse `http://localhost:3000` (ou a porta configurada).
+```bash
+cd CG-CRUD
+```
 
+### 3. Instale as dependências
 
-**Espero que este README.md esteja mais alinhado com suas expectativas!**
+Caso exista um arquivo `package-lock.json`, prefira:
+
+```bash
+npm ci
+```
+
+Alternativamente:
+
+```bash
+npm install
+```
+
+### 4. Inicie o servidor de desenvolvimento
+
+```bash
+npm run dev
+```
+
+O Vite disponibilizará o endereço local no terminal, normalmente:
+
+```text
+http://localhost:5173
+```
+
+### 5. Gere a versão de produção
+
+Para compilar a aplicação:
+
+```bash
+npm run build
+```
+
+O resultado será gerado no diretório `dist/`.
+
+### 6. Visualize a versão de produção localmente
+
+```bash
+npm run preview
+```
+
+---
+
+## ☁️ Implantação
+
+A aplicação está hospedada na **Vercel**, permitindo seu acesso por meio de um endereço público.
+
+**Acessar:**  
+https://cg-crud-git-master-jhonathas-projects.vercel.app
+
+A implantação pode ser realizada conectando o repositório do GitHub à Vercel.
+
+Configurações principais:
+
+- Framework Preset: Vite.
+- Build Command: `npm run build`.
+- Output Directory: `dist`.
+- Node.js Version: `26.x`.
+
+---
+
+## 💾 Armazenamento de dados
+
+Atualmente, o projeto utiliza o `localStorage` para armazenar os cadastros.
+
+Isso significa que:
+
+- Os dados permanecem salvos no navegador utilizado.
+- Não é necessário configurar um banco de dados para executar a aplicação.
+- Os registros não são sincronizados automaticamente entre dispositivos.
+- A limpeza dos dados do navegador pode ocasionar a perda dos cadastros.
+
+A aplicação também utiliza identificadores únicos para cada registro, permitindo realizar edições sem depender do CPF como identificador principal.
+
+### ⚠️ Privacidade e segurança
+
+Este projeto possui finalidade demonstrativa e educacional.
+
+Como os dados são armazenados localmente no navegador, não há autenticação, controle de acesso ou proteção adequada para informações pessoais sensíveis.
+
+**Não utilize informações reais de pacientes.** Para um ambiente de produção, seria necessário implementar uma API, banco de dados seguro, autenticação, autorização e medidas adequadas de proteção de dados, considerando especialmente a LGPD.
+
+A validação matemática do CPF não confirma sua existência, situação cadastral ou identidade do titular junto à Receita Federal.
+
+---
+
+## 📌 Possíveis melhorias futuras
+
+Algumas funcionalidades que podem ser incorporadas em versões futuras:
+
+- Integração com banco de dados.
+- Backend para gerenciamento dos registros.
+- Sistema de autenticação e controle de usuários.
+- Paginação e relatórios mais avançados.
+- Histórico de alterações dos cadastros.
+- Dashboard com gráficos estatísticos.
+- Implementação de testes automatizados.
+- Melhorias de acessibilidade.
+
+---
+
+## 👨‍💻 Autor
+
+**Desenvolvido por Jhonathas Souza.**
+
+- GitHub: [@DevJhonathas](https://github.com/DevJhonathas)
+
+---
+
+## 📄 Licença
+
+Este projeto está licenciado sob a [Licença MIT](LICENSE). Disponibilizado para fins de estudo, aprendizado e demonstração de desenvolvimento web.
+
+Você é livre para utilizar, copiar, modificar, distribuir e comercializar este software, desde que mantenha os avisos de direitos autorais e o texto da licença original.
+
+---
+
+<p align="center">
+  Desenvolvido com ❤️ utilizando Vue.js.
+</p>
