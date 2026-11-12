@@ -10,6 +10,12 @@ O projeto busca demonstrar a utilização de tecnologias do ecossistema Vue.js n
   </a>
 </p>
 
+<p align="center">
+  <img width="44.3%" alt="pacientes" src="https://github.com/user-attachments/assets/9eaeb705-1d32-499c-91c9-e30998286e96" />
+  <img width="48%" alt="cadastra_pacientes" src="https://github.com/user-attachments/assets/a195ea89-ac35-4aba-8674-95bf6269a1e6" />
+
+</p>
+
 ---
 
 ## 📋 Sobre o projeto
